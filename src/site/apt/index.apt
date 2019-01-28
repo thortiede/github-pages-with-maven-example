@@ -2,7 +2,7 @@ Welcome to this short guide
 
  What you read here is the index.apt file in <<<src/site/apt/>>> that gets translated to the index.html page.
 
- Without that file (or an index file in some other format, see {{{https://maven.apache.org/doxia/references/apt-format.html}the <<<creating a site>>> page of the maven project}}) nothing will be displayed.
+ Without that file (or an index file in some other format, see {{{https://maven.apache.org/guides/mini/guide-site.html}the <<<creating a site>>> page of the maven project}}) nothing will be displayed.
 
 How to work with this guide
 

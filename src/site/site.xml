@@ -11,7 +11,7 @@
 
 	<body>
 		<links>
-		 <item name="Creating a site" href="https://maven.apache.org/guides/mini/guide-site.html" />
+		 <item name="The repository" href="https://github.com/thortiede/github-pages-with-maven-example" />
 		</links>
 
 		<menu name="What you will find here">
