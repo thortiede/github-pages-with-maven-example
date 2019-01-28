@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Github Pages with maven-site plugin">
+	<bannerLeft>
+    		<name>Maven</name>
+    		<src>http://maven.apache.org/images/apache-maven-project.png</src>
+    		<href>http://maven.apache.org/</href>
+  	</bannerLeft>
+  	<bannerRight>
+    		<src>http://maven.apache.org/images/maven-small.gif</src>
+  	</bannerRight>
+
+	<body>
+		<links>
+		 <item name="Creating a site" href="https://maven.apache.org/guides/mini/guide-site.html" />
+		</links>
+
+		<menu name="What you will find here" />
+		 <item name="Main site" href="index.html" />
+		 <item name="pom.xml" href="pom.html" />
+		 <item name="site.xml" href="sitexml.html" />
+		 <item name="content creation" href="contentcreation.html />
+		 <item name="buld and deploy" href="builddeploy.html" />
+		</menu>
+
+	</body>
+</project>
