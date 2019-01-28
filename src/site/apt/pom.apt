@@ -1,8 +1,8 @@
 The obvious
 
  To use the maven-site-plugin you need to use.... <<<maven>>>.
- Maven works by builing a <<<pom.xml>>> file.
- Take a look at the <<<pom.xml>>> file in this project.
+ Maven works by building a <<<pom.xml>>> file.
+ Take a look at the {{{https://github.com/thortiede/github-pages-with-maven-example/blob/master/pom.xml}<<<pom.xml>>> file in this project}}.
 
  You will find the following building blocks that you need in your project:
 
