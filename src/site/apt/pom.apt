@@ -10,7 +10,7 @@ The obvious
  Of cource you need the maven site plugin.
 
  So, within the <<<pluginManagement>>> <<<plugin>>> section place:
- +---------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------+
   <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
 	<artifactId>maven-site-plugin</artifactId>
@@ -34,44 +34,44 @@ The obvious
 		</dependency>
 	</dependencies>
 </plugin> 
- +---------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------+
 
  This will allow maven to build the documentation using the command
 
- +------------+
- mvn site
- +------------+
++------------+
+mvn site
++------------+
 
  [[2]] maven-resources-plugin
  
  Also in the <<<plugins>>> Section place:
 
- +---------------------------------------------------+
++---------------------------------------------------+
  <plugin>
  	<artifactId>maven-resources-plugin</artifactId> 
 	<version>2.7</version>
 	<configuration>
 	</configuration>
  </plugin>
- +---------------------------------------------------+
++---------------------------------------------------+
 
  This plugin allows us to copy the created site (that is put into the <<<target>>> folder by default)
  to some other place in the repository. We need to have the <<html>>-files in the <<docs>>-folder.
  
  We tell maven that with the following section:
- +---------------------------------------------------+ make sure the website code exists inside target/site folder -->
++---------------------------------------------------+ make sure the website code exists inside target/site folder -->
  <resources>
  	<resource>
 		<directory>${project.build.directory}/site/</directory>
 		<targetPath>${basedir}/docs/</targetPath>
 	</resource>
  </resources>
- +---------------------------------------------------+
++---------------------------------------------------+
  
  In order to initiate the copy process we need to invoke
- +--------------------------+
++--------------------------+
  mvn resources:resources
- +--------------------------+
++--------------------------+
 
  And that is all we need in our <<<pom.xml>>>.
  Notice that maven will load a bunch of dependencies the first time you run the two maven commands.
