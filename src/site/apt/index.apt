@@ -1,0 +1,4 @@
+Headline 1 in index.apt
+
+ This is the index.apt File that gets translated to the index.html page
+ Without that file (or an index file in some other format) nothing will be displayed.
