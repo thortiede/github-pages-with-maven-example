@@ -1,0 +1,6 @@
+What needs to go into the <<<site.xml>>> file?
+
+ I used the example <<<site.xml>>> file found at {{{https://maven.apache.org/doxia/references/apt-format.html}Creating a site page}}.
+ Then I edited the links (those will show up in the top right if I am correct) and changed the menu to what I needed/wanted.
+
+ Since I did not know what reports were yet, I deleted that line.

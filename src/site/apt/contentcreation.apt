@@ -1,0 +1,12 @@
+How to create content?
+
+ As can be seen at {{{https://maven.apache.org/guides/mini/guide-site.html}https://maven.apache.org/guides/mini/guide-site.html}} we can put 
+ all the content we create under
+
++--------+
+scr/site/apt/
++--------+
+
+ Take a look at the repository to get a feel for what needs to be there.
+ A quick guide for APT can be found at {{{https://maven.apache.org/doxia/references/apt-format.html}https://maven.apache.org/doxia/references/apt-format.html}}.
+ Notice that I never used APT before this little project and in fact it is not that hard once you just dive into it.

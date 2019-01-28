@@ -55,7 +55,31 @@
 <p>You will find the following building blocks that you need in your project:</p>
 <ol style="list-style-type: decimal">
 <li>maven-site-plugin Of cource you need the maven site plugin.
-<p>So, within the <tt>pluginManagement</tt> <tt>plugin</tt> section place: +---------------------------------------------------------------------------------------------------------+ <i>plugin</i> <i>groupId</i>org.apache.maven.plugins<i>/groupId</i> <i>artifactId</i>maven-site-plugin<i>/artifactId</i> <i>version</i>3.7.1<i>/version</i> <i>configuration</i> <i>locales</i>en<i>/locales</i> <i>/configuration</i> <i>executions</i> <i>execution</i> <i>id</i>attach-descriptor<i>/id</i> <i>goals</i> <i>goal</i>attach-descriptor<i>/goal</i> <i>/goals</i> <i>/execution</i> <i>/executions</i> <i>dependencies</i> <i>dependency</i> <i>groupId</i>org.apache.maven.doxia<i>/groupId</i> <i>artifactId</i>doxia-module-markdown<i>/artifactId</i> <i>version</i>1.7<i>/version</i> <i>/dependency</i> <i>/dependencies</i> <i>/plugin</i> +---------------------------------------------------------------------------------------------------------+</p>
+<p>So, within the <tt>pluginManagement</tt> <tt>plugin</tt> section place:</p>
+<div class="source">
+<pre>  &lt;plugin&gt;
+        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+        &lt;artifactId&gt;maven-site-plugin&lt;/artifactId&gt;
+        &lt;version&gt;3.7.1&lt;/version&gt;
+        &lt;configuration&gt;
+                &lt;locales&gt;en&lt;/locales&gt;
+        &lt;/configuration&gt;
+        &lt;executions&gt;
+                &lt;execution&gt;
+                        &lt;id&gt;attach-descriptor&lt;/id&gt;
+                        &lt;goals&gt;
+                                &lt;goal&gt;attach-descriptor&lt;/goal&gt;
+                        &lt;/goals&gt;
+                &lt;/execution&gt;
+        &lt;/executions&gt;
+        &lt;dependencies&gt;
+                &lt;dependency&gt;
+                        &lt;groupId&gt;org.apache.maven.doxia&lt;/groupId&gt;
+                        &lt;artifactId&gt;doxia-module-markdown&lt;/artifactId&gt;
+                        &lt;version&gt;1.7&lt;/version&gt;
+                &lt;/dependency&gt;
+        &lt;/dependencies&gt;
+&lt;/plugin&gt; </pre></div>
 <p>This will allow maven to build the documentation using the command</p>
 <div class="source">
 <pre>mvn site</pre></div></li>
@@ -69,9 +93,24 @@
         &lt;/configuration&gt;
  &lt;/plugin&gt;</pre></div>
 <p>This plugin allows us to copy the created site (that is put into the <tt>target</tt> folder by default) to some other place in the repository. We need to have the <b>html</b>-files in the <b>docs</b>-folder.</p>
-<p>We tell maven that with the following section: +---------------------------------------------------+ make sure the website code exists inside target/site folder --&gt; <i>resources</i> <i>resource</i> <i>directory</i>$<a name="project.build.directory">project.build.directory</a>/site/<i>/directory</i> <i>targetPath</i>$<a name="basedir">basedir</a>/docs/<i>/targetPath</i> <i>/resource</i> <i>/resources</i> +---------------------------------------------------+</p>
-<p>In order to initiate the copy process we need to invoke +--------------------------+ mvn resources:resources +--------------------------+</p>
-<p>And that is all we need in our <tt>pom.xml</tt>. Notice that maven will load a bunch of dependencies the first time you run the two maven commands.</p></li></ol></div>
+<p>We tell maven that with the following section:</p>
+<div class="source">
+<pre> &lt;resources&gt;
+        &lt;resource&gt;
+                &lt;directory&gt;${project.build.directory}/site/&lt;/directory&gt;
+                &lt;targetPath&gt;${basedir}/docs/&lt;/targetPath&gt;
+        &lt;/resource&gt;
+ &lt;/resources&gt;</pre></div>
+<p>In order to initiate the copy process we need to invoke</p>
+<div class="source">
+<pre> mvn resources:resources</pre></div>
+<p>And that is all we need in our <tt>pom.xml</tt>. Notice that maven will load a bunch of dependencies the first time you run the two maven commands. Also notice that you need to invoke those maven commands on your local copy of the repository, add the generated html files in the docs folder, commit and push</p>
+<div class="source">
+<pre>mvn site
+mvn resources:resources
+git add docs
+git commit -m &quot;Generated docs&quot;
+git push</pre></div></li></ol></div>
       </div>
     </div>
     <div class="clear">

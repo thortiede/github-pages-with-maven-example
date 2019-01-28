@@ -60,7 +60,8 @@ mvn site
  to some other place in the repository. We need to have the <<html>>-files in the <<docs>>-folder.
  
  We tell maven that with the following section:
-+---------------------------------------------------+ make sure the website code exists inside target/site folder -->
+
++---------------------------------------------------+ 
  <resources>
  	<resource>
 		<directory>${project.build.directory}/site/</directory>
@@ -70,9 +71,20 @@ mvn site
 +---------------------------------------------------+
  
  In order to initiate the copy process we need to invoke
+
 +--------------------------+
  mvn resources:resources
 +--------------------------+
 
  And that is all we need in our <<<pom.xml>>>.
  Notice that maven will load a bunch of dependencies the first time you run the two maven commands.
+ Also notice that you need to invoke those maven commands on your local copy of the repository, add the generated html files in the docs folder, commit and push
+
++--------------+
+mvn site
+mvn resources:resources
+git add docs
+git commit -m "Generated docs"
+git push
++--------------+
+ 

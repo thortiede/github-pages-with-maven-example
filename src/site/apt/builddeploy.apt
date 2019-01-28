@@ -1,0 +1,19 @@
+Build and Deploy
+
+ Once you wrote your <<<APT>>>-files issue the following on the command line in your project root:
+
++-------+
+mvn site
+mvn resources:resources
+git add docs
+git add src/site
+git commit -m "Your comment here"
+git push
++-------+
+
+Enable Github pages
+
+ Now that your repository should have a <<<docs>>> folder, you can enable Hithub Pages in the Settings of your repository.
+ Choose <<< master branch /docs folder>>> as source, hit <<<Save>>> and after a couple of seconds your site should be available at the given link.
+
+
