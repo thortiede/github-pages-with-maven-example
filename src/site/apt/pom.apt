@@ -11,8 +11,8 @@ The obvious
 
  So, within the <<<pluginManagement>>> <<<plugin>>> section place:
 
-+---------------------------------------------------------------------------------------------------------+
-  <plugin>
++----------------------------------------------------------------------+
+ <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
 	<artifactId>maven-site-plugin</artifactId>
 	<version>3.7.1</version>
@@ -34,8 +34,8 @@ The obvious
 			<version>1.7</version>
 		</dependency>
 	</dependencies>
-</plugin> 
-+---------------------------------------------------------------------------------------------------------+
+ </plugin> 
++----------------------------------------------------------------------+
 
  This will allow maven to build the documentation using the command
 
