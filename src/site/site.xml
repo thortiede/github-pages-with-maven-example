@@ -14,7 +14,7 @@
 		 <item name="Creating a site" href="https://maven.apache.org/guides/mini/guide-site.html" />
 		</links>
 
-		<menu name="What you will find here" />
+		<menu name="What you will find here">
 		 <item name="Main site" href="index.html" />
 		 <item name="pom.xml" href="pom.html" />
 		 <item name="site.xml" href="sitexml.html" />
