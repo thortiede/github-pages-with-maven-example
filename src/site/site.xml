@@ -18,7 +18,7 @@
 		 <item name="Main site" href="index.html" />
 		 <item name="pom.xml" href="pom.html" />
 		 <item name="site.xml" href="sitexml.html" />
-		 <item name="content creation" href="contentcreation.html />
+		 <item name="content creation" href="contentcreation.html" />
 		 <item name="build and deploy" href="builddeploy.html" />
 		</menu>
 
