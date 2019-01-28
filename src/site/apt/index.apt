@@ -1,4 +1,16 @@
-Headline 1 in index.apt
+Welcome to this short guide
 
- This is the index.apt File that gets translated to the index.html page
- Without that file (or an index file in some other format) nothing will be displayed.
+ What you read here is the index.apt file in <<<src/site/apt/>>> that gets translated to the index.html page.
+
+ Without that file (or an index file in some other format, see {{{https://maven.apache.org/doxia/references/apt-format.html}the creating a site page of the maven project) nothing will be displayed.
+
+How to work with this guide
+
+ In the menu on the left you find quick links to the different sub-topics that are mentioned here.
+ I will explain how I created this specific site on github pages using this repository.
+
+ Without further ado, let\'s go:
+
+ [[1]] {{{pom.html}Create a pom.xml}}
+  This chapter explains what you need to put in your pom.xml file for maven to be able to create the static html pages 
+  needed for github pages
