@@ -11,6 +11,21 @@ How to work with this guide
 
  Without further ado, let\'s go:
 
- [[1]] {{{pom.html}Create a pom.xml}}
-  This chapter explains what you need to put in your pom.xml file for maven to be able to create the static html pages 
+ [[1]] {{{./pom.html}Create a pom.xml}}
+  
+ This chapter explains what you need to put in your pom.xml file for maven to be able to create the static html pages 
   needed for github pages
+
+ [[2]] {{{./sitexml.html}site.xml HowTo Basics}}
+
+ This explains what to put in the <<<site.xml>>> File.
+
+ [[3]] {{{./contentcreation.html}Create content}}
+
+ Here you find hints for creating the content you can read here.
+
+ [[4]] {{{./builddeploy.html}How to build and deploy the documentation}}
+
+ Steps to take to build the documentation, copy it to the <<<docs/>>> folder and have it appear on the web.
+
+
