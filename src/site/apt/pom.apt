@@ -10,6 +10,7 @@ The obvious
  Of cource you need the maven site plugin.
 
  So, within the <<<pluginManagement>>> <<<plugin>>> section place:
+
 +---------------------------------------------------------------------------------------------------------+
   <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
