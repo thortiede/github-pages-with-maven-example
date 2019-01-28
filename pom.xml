@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>org.tts</groupId>
+	<artifactId>githubpagewithmaven</artifactId> 
+
+	<name>github-pages-with-maven-example</name>
+	<version>0.1</version>
+	<url>https://github.com/thortiede/github-pages-with-maven-example</url>
+	<inceptionYear>2019</inceptionYear>
+	<description>This repositories sole purpose is to show with an easy example 
+		what is needed to create documenation for a github project 
+		using github pages, where the html files that are used 
+		are generated with the maven-site-plugin.
+	</description>
+
+	<developers>
+		<developer>
+			<name>Thorsten Tiede</name>
+			<id>thortiede</id>
+			<email>tiede@informatik.uni-tuebingen.de</email>
+			<url>https://github.com/thortiede</url>
+		</developer>
+	</developers>
+
+	<!-- dependencies for your project here -->
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- The maven-site-plugin for generating the static webpage to be used with github-pages -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.7.1</version>
+					<configuration>
+						<locales>en</locales>
+					</configuration>
+					<executions>
+						<execution>
+							<id>attach-descriptor</id>
+							<goals>
+								<goal>attach-descriptor</goal>
+							</goals>
+						</execution>
+					</executions>
+					<dependencies>
+						<dependency>
+							<groupId>org.apache.maven.doxia</groupId>
+							<artifactId>doxia-module-markdown</artifactId>
+							<version>1.7</version>
+						</dependency>
+					</dependencies>
+				</plugin> 
+				
+				<!-- This plug-in copies resources from target/site to docs/ so Github can render it -->
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.7</version>
+					<configuration>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		
+		<!-- Resources copied by resources plug-in. Note that mvn site needs to run before mvn install to
+		make sure the website code exists inside target/site folder -->
+		<resources>
+			<resource>
+				<directory>${project.build.directory}/site/</directory>
+				<targetPath>${basedir}/docs/</targetPath>
+			</resource>
+		</resources>
+	</build>
+</project>
