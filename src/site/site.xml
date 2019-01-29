@@ -22,5 +22,9 @@
 		 <item name="build and deploy" href="builddeploy.html" />
 		</menu>
 
+		<menu ref="reports"/>
+
+
+
 	</body>
 </project>
